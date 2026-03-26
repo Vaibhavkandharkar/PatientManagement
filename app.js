@@ -8,7 +8,7 @@ const app = express();
 
 // ── Middleware ──────────────────────────────────────────
 app.use(cors({
-  origin: '*',           // change to your frontend URL in production
+  origin: 'https://patientmanagement-blue.vercel.app',// change to your frontend URL in production
   methods: ['GET','POST','PUT','PATCH','DELETE'],
   allowedHeaders: ['Content-Type','Authorization'],
 }));
@@ -79,5 +79,5 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`\n🚀  MediCore HMS API running on http://localhost:${PORT}`);
   console.log(`📋  Health check: http://localhost:${PORT}/`);
-  console.log(`🔐  Auth:         http://localhost:${PORT}/api/auth/login\n`);
+  console.log(`🔐  Auth: http://localhost:${PORT}/api/auth/login\n`);
 });
