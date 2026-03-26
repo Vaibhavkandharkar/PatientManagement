@@ -8,7 +8,7 @@ const app = express();
 
 // ── Middleware ──────────────────────────────────────────
 app.use(cors({
-  origin: 'https://patientmanagement-blue.vercel.app',// change to your frontend URL in production
+  origin: '*',// change to your frontend URL in production
   methods: ['GET','POST','PUT','PATCH','DELETE'],
   allowedHeaders: ['Content-Type','Authorization'],
 }));
